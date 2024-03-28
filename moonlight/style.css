@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Times New Roman', Times, serif;
+}
+body{
+    background-color: #0a2a43;
+    min-height: 100vh;
+}
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+section::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;                                /*section get blur affect between home img and a section before image*/
+    height: 100px;
+    background: linear-gradient(to top,#0a2a43,transparent);
+    z-index: 100000;
+}
+section img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+
+}
+#text{
+    position: relative;
+    color: #fff;
+    font-size: 8rem;
+    z-index: 1;
+
+
+}
+#road{
+    z-index: 2;
+}
+
+
+
+
+/* abour section csss */
+.about{
+    padding: 100px;
+    text-align: justify;
+
+}
+.about h2{
+    font-size: 3rem;
+    color: #fff;
+}
+.about p{
+    margin-top: 50px;
+    color: #f2f2f2;
+    font-size: 18px;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Effect Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <img src="bg.jpg"  id="bg">
+        <img src="moon.png"  id="moon">
+        <img src="mountain (1).png"  id="mountain">
+        <img src="road (1).png"  id="road">
+        <h2 id="text">Moon Light</h2>
+    </section>
+    <div class="about">
+        <h2>parrallax Website</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum placeat
+             quidem temporibus impedit officia perferendis facilis repellat quisquam saepe, non porro quas consectetur iste 
+             doloremque dolorum qui praesentium ut dolorem dignissimos dolores consequatur quibusdam repudiandae? Reiciendis explicabo veritatis quisquam nesciunt sit. Aliquid necessitatibus porro autem deleniti repellendus a tempore incidunt optio? Vero ex nihil, delectus magni voluptatum quis! Adipisci necessitatibus sit placeat repudiandae, ratione rerum asperiores assumenda id hic quia nam, natus maiores autem vel eius pariatur ex culpa architecto deserunt dolorem itaque. Ad nisi, vero nostrum itaque illum eos fuga possimus consequuntur facere vel dolorem explicabo hic quidem aut fugit totam. Ratione est, minima, ipsum accusantium unde sit, velit dolor nesciunt accusamus quos nemo itaque! Nihil, molestias illo, accusamus, aspernatur quae reprehenderit illum quasi ullam veritatis nobis quia inventore maiores optio dolores magnam. Doloremque perferendis totam nulla maiores praesentium nemo harum asperiores, impedit iusto, beatae at. Iusto et porro minima. Sed eligendi quae ducimus ad, numquam molestiae deleniti nisi at <br><br>obcaecati suscipit culpa dolores. Aperiam eum
+              suscipit sunt deserunt expedita sint vero, eaque earum dolorem consequatur nostrum magni doloremque, ratione ad animi quasi corrupti facere perspiciatis impedit quisquam rem voluptas possimus.
+             Commodi maiores voluptatem, sed aliquam vel beatae laudantium.</p>
+    </div>
+
+
+    
+    <script>
+        const bg=document.getElementById('bg');
+        const moon=document.getElementById('moon');
+        const mountain=document.getElementById('mountain');
+        const road=document.getElementById('road');
+        const text=document.getElementById('text');
+
+        window.addEventListener('scroll',function(){
+            const value =window.scrollY;    //object of scroll effect (value)
+
+            bg.style.top =value * 0.5 +'px';
+            moon.style.left =-value * 0.5 +'px';
+            mountain.style.top = -value * 0.15 +'px';
+            road.style.top =value * 0.15 +'px';
+            text.style.top =value * 1 +'px';
+        })
+
+    </script>
+</body>
+</html>
